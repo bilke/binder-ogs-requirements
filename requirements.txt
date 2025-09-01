@@ -1,0 +1,26 @@
+ogs==6.5.5
+seaborn
+jupytext
+nbgitpuller
+ipywidgets
+black
+isort
+pandoc
+jupyterlab-code-formatter
+# VTUinterface>=0.704
+--extra-index-url https://gmsh.info/python-packages-dev-nox
+gmsh==4.13.1.dev1
+# ogstools==x.x.x # install manually in Dockerfile
+# ogstools dependencies
+h5py
+matplotlib
+meshio
+numpy
+scipy
+Pint
+papermill
+typeguard
+lxml
+pandas
+psutil
+watchdog

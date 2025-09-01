@@ -1,5 +1,4 @@
 #!/bin/bash
-
 export OGS_USE_PATH="1"
-
+export PYVISTA_TRAME_SERVER_PROXY_PREFIX="$JUPYTERHUB_SERVICE_PREFIX/proxy/"
 exec "$@"
