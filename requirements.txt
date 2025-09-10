@@ -1,26 +1,13 @@
 ogs==6.5.5
-seaborn
-jupytext
+ogstools[pinned]==0.7.0
+# binder requirements
 nbgitpuller
-ipywidgets
-black
-isort
 pandoc
-jupyterlab-code-formatter
-# VTUinterface>=0.704
---extra-index-url https://gmsh.info/python-packages-dev-nox
-gmsh==4.13.1.dev1
-# ogstools==x.x.x # install manually in Dockerfile
-# ogstools dependencies
-h5py
-matplotlib
-meshio
-numpy
-scipy
-Pint
-papermill
-typeguard
-lxml
-pandas
-psutil
-watchdog
+# ogs Tests/Data deps:
+jupytext>=1.14.5
+h5py>=3.8
+heatsource-py@git+https://github.com/joergbuchwald/heatsource_thm@bbd5bab17fc2ec228c773e087dc847e1ad5f9a4c
+ipywidgets
+seaborn>=0.12
+VTUinterface>=0.704
+h5py>=3.8
