@@ -35,8 +35,7 @@ import ogstools as ot
 
 # %%
 out_dir = Path(os.environ.get("OGS_TESTRUNNER_OUT_DIR", "_out"))
-if not out_dir.exists():
-    out_dir.mkdir(parents=True)
+out_dir.mkdir(parents=True, exist_ok=True)
 
 # %%
 prj_name = "SimpleMechanics"
@@ -159,7 +158,7 @@ except Exception as inst:
 print(datetime.now())
 
 # %%
-ms = ot.MeshSeries(f"{out_dir}/{prj_name}.pvd")
+ms = ot.MeshSeries(f"{out_dir}/{prj_name}.pvd").scale(time=("s", "a"))
 points_coords = np.array([[0.3, 0.5, 0.0], [0.24, 0.21, 0.0]])
 points_labels = ["pt0", "pt1"]
 
@@ -167,19 +166,23 @@ points_labels = ["pt0", "pt1"]
 fig, ax = plt.subplots(nrows=1, ncols=1)
 
 colors = {"x": ["b", "r"], "y": ["g", "m"]}
-linestyles = {"linear": ["-", "-"], "nearest": ["--", "--"]}
+linestyles = {"linear": "-", "nearest": "--"}
 
 for component in ["x", "y"]:
     for interp_method in ["linear", "nearest"]:
         labels = [f"$u_{component}$ {label} {interp_method}" for label in points_labels]
 
-        ms.plot_probe(
-            points_coords,
+        ms_pts = ot.MeshSeries.extract_probe(
+            ms, points_coords, interp_method=interp_method
+        ).scale(time=("s", "a"))
+        ot.plot.line(
+            ms_pts,
+            "time",
             ot.variables.displacement[component],
             labels=labels,
-            time_unit="a",
-            interp_method=interp_method,
             ax=fig.axes[0],
             colors=colors[component],
-            linestyles=linestyles[interp_method],
+            linestyle=linestyles[interp_method],
         )
+
+# %%
