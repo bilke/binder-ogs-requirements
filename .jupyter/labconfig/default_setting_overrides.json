@@ -6,8 +6,8 @@
       "python": "Jupytext Notebook"
     }
   },
-  "@jupyterlab/fileeditor-extension:plugin": {
-    "fileTypeOverrides": {
+  "@jupyterlab/codemirror-extension:plugin": {
+    "modes": {
       "*.prj": "xml"
     }
   }
