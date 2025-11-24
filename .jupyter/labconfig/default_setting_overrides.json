@@ -5,5 +5,10 @@
       "myst": "Jupytext Notebook",
       "python": "Jupytext Notebook"
     }
+  },
+  "@jupyterlab/fileeditor-extension:plugin": {
+    "fileTypeOverrides": {
+      "*.prj": "xml"
+    }
   }
 }
