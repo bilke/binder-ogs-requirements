@@ -1,4 +1,5 @@
 #!/bin/bash
 export OGS_USE_PATH="1"
 export PYVISTA_TRAME_SERVER_PROXY_PREFIX="$JUPYTERHUB_SERVICE_PREFIX/proxy/"
+pip install ogs --pre --no-dependencies --force --index-url https://gitlab.opengeosys.org/api/v4/projects/120/packages/pypi/simple
 exec "$@"
