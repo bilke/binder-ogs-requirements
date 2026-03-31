@@ -10,3 +10,6 @@ RUN pip install -r requirements.txt \
   && fix-permissions "${CONDA_DIR}" \
   && fix-permissions "/home/${NB_USER}"
 
+RUN chmod +x "${HOME}/start"
+
+ENTRYPOINT ["./start"]
