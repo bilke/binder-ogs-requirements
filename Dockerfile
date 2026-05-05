@@ -1,6 +1,16 @@
 # https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-minimal-notebook
 FROM quay.io/jupyter/minimal-notebook:python-3.12.11
 
+# Install apptainer
+USER root
+RUN apt-get update --yes && \
+    apt-get install --yes --no-install-recommends software-properties-common && \
+    HOME=/root add-apt-repository -y ppa:apptainer/ppa && \
+    apt-get update --yes && \
+    apt-get install --yes --no-install-recommends apptainer-suid && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+USER ${NB_UID}
+
 COPY --chown=${NB_UID}:${NB_GID} . ${HOME}
 WORKDIR ${HOME}
 
