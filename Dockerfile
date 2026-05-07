@@ -7,7 +7,7 @@ RUN apt-get update --yes && \
     apt-get install --yes --no-install-recommends software-properties-common && \
     HOME=/root add-apt-repository -y ppa:apptainer/ppa && \
     apt-get update --yes && \
-    apt-get install --yes --no-install-recommends apptainer-suid && \
+    apt-get install --yes --no-install-recommends apptainer && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 USER ${NB_UID}
 
