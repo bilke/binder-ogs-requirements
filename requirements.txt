@@ -2,7 +2,7 @@
 jupyterlab-link-share==0.3.0
 jupyter-collaboration==4.2.1
 # ogs
-ogs==6.5.8 # also in ogstools[pinned]
+ogs=6.5.8=*openmpi* # also in ogstools[pinned]
 ogstools==0.8.0
 # binder requirements
 nbgitpuller
