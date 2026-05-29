@@ -3,7 +3,7 @@ jupyterlab-link-share==0.3.0
 jupyter-collaboration==4.2.1
 # ogs
 ogs==6.5.8 # also in ogstools[pinned]
-ogstools==0.8.0
+ogstools==0.8.1
 # binder requirements
 nbgitpuller
 pandoc
