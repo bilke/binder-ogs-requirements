@@ -1,3 +1,4 @@
 #!/bin/bash
+export OGS_BIN_PATH=/opt/conda/bin
 export PYVISTA_TRAME_SERVER_PROXY_PREFIX="$JUPYTERHUB_SERVICE_PREFIX/proxy/"
 exec "$@"
