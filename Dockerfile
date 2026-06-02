@@ -4,6 +4,8 @@ FROM quay.io/jupyter/minimal-notebook:python-3.12.11
 COPY --chown=${NB_UID}:${NB_GID} . ${HOME}
 WORKDIR ${HOME}
 
+# When using conda for ogs installation
+# add OGS_BIN_PATH=/opt/conda/bin to start!
 RUN pip install -r requirements.txt \
   && pip uninstall gmsh -y \
   && pip install --no-cache-dir --extra-index-url https://gmsh.info/python-packages-dev-nox gmsh==4.13.1.dev1 \
