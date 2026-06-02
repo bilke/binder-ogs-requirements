@@ -16,3 +16,5 @@ seaborn>=0.12
 VTUinterface>=0.704
 h5py>=3.8
 porepy@git+https://github.com/pmgbergen/porepy.git@v1.12
+ipywidgets
+pyvista[all,trame]
