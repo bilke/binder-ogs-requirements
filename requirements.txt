@@ -1,18 +1,18 @@
 # jupyter extensions
-jupyterlab-link-share==0.3.0
-jupyter-collaboration==4.2.1
+# jupyterlab-link-share==0.3.0
+# jupyter-collaboration==4.2.1
 # ogs
-ogs==6.5.8 # also in ogstools[pinned]
-ogstools==0.8.1
+# ogs==6.5.8 # also in ogstools[pinned]
+# ogstools==0.8.1
 # binder requirements
-nbgitpuller
-pandoc
+# nbgitpuller
+# pandoc
 # ogs Tests/Data deps:
-jupytext>=1.14.5
-h5py>=3.8
-heatsource-py@git+https://github.com/joergbuchwald/heatsource_thm@bbd5bab17fc2ec228c773e087dc847e1ad5f9a4c
-ipywidgets
-seaborn>=0.12
-VTUinterface>=0.704
-h5py>=3.8
-porepy@git+https://github.com/pmgbergen/porepy.git@v1.12
+# jupytext>=1.14.5
+# h5py>=3.8
+# heatsource-py@git+https://github.com/joergbuchwald/heatsource_thm@bbd5bab17fc2ec228c773e087dc847e1ad5f9a4c
+# ipywidgets
+# seaborn>=0.12
+# VTUinterface>=0.704
+# h5py>=3.8
+# porepy@git+https://github.com/pmgbergen/porepy.git@v1.12
