@@ -1,5 +1,5 @@
 # https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-minimal-notebook
-FROM quay.io/jupyter/minimal-notebook:python-3.12.11
+FROM quay.io/jupyter/minimal-notebook:python-3.13.15
 
 COPY --chown=${NB_UID}:${NB_GID} . ${HOME}
 WORKDIR ${HOME}
