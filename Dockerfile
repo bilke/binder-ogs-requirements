@@ -18,5 +18,7 @@ RUN pip install -r requirements.txt \
   && fix-permissions "/home/${NB_USER}"
 
 RUN chmod +x "${HOME}/start"
+RUN jupyter server extension enable --sys-prefix --py jupyter_server_proxy
 
+ENV PYVISTA_TRAME_JUPYTER_MODE=proxy
 ENTRYPOINT ["./start"]
